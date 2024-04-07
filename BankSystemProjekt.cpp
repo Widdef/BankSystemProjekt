@@ -5,11 +5,18 @@
 #include "UI.h"
 #include "Client.h"
 #include <map>
+#include "CSVRange.h"
 
 
 int main()
 {
     std::srand(std::time(nullptr));
+
+    std::ifstream file("ClientsList.csv");
+    for (auto& row : CSVRange(file))
+    {
+        std::cout << "4th Element(" << row[0] << ")\n";
+    }
     Client cli1("Mark", "", "Kowalski", res::German, "ABC123", res::male, Date(13, 4, 1993));
     cli1.showData();
     Client cli2("Damian", "", "Kowalski", res::Polish, "ADC1337", res::male, Date(12, 3, 1999));

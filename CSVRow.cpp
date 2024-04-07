@@ -12,7 +12,7 @@ void CSVRow::readNextRow(std::istream& str)
     m_data.clear();
     m_data.emplace_back(-1);
     std::string::size_type pos = 0;
-    while ((pos = m_line.find(',', pos)) != std::string::npos)
+    while ((pos = m_line.find(';', pos)) != std::string::npos)
     {
         m_data.emplace_back(pos);
         ++pos;
