@@ -28,6 +28,12 @@
     <Filter Include="Header Files\UI">
       <UniqueIdentifier>{e6d6a80c-5e8b-4dfb-bbaa-df3cd14c271f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\CSVHandlers">
+      <UniqueIdentifier>{b18ed1c5-970c-40b5-ac1e-da5ab34623f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CSVHandlers">
+      <UniqueIdentifier>{75554171-364e-4cdb-9f95-75455cef78fd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BankSystemProjekt.cpp">
@@ -47,6 +53,15 @@
     </ClCompile>
     <ClCompile Include="Client.cpp">
       <Filter>Source Files\dataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="CSVIterator.cpp">
+      <Filter>Source Files\CSVHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="CSVRow.cpp">
+      <Filter>Source Files\CSVHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="CSVRange.cpp">
+      <Filter>Source Files\CSVHandlers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +85,15 @@
     </ClInclude>
     <ClInclude Include="Client.h">
       <Filter>Header Files\dataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="CSVIterator.h">
+      <Filter>Header Files\CSVHandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="CSVRow.h">
+      <Filter>Header Files\CSVHandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="CSVRange.h">
+      <Filter>Header Files\CSVHandlers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
