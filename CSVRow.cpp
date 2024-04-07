@@ -22,7 +22,7 @@ void CSVRow::readNextRow(std::istream& str)
     m_data.emplace_back(pos);
 }
 
-std::string_view CSVRow::operator[](std::size_t index) const
+std::string CSVRow::operator[](std::size_t index) const
 {
-    return std::string_view(&m_line[m_data[index] + 1], m_data[index + 1] - (m_data[index] + 1));
+    return std::string(&m_line[m_data[index] + 1], m_data[index + 1] - (m_data[index] + 1));
 }

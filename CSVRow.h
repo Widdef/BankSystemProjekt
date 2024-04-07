@@ -5,7 +5,7 @@
 #include <sstream>
 #include <vector>
 #include <string>
-#include <string_view>
+#include <string>
 
 
 class CSVRow
@@ -14,7 +14,7 @@ private:
     std::string         m_line;
     std::vector<int>    m_data;
 public:
-    std::string_view operator[](std::size_t index) const;
+    std::string operator[](std::size_t index) const;
     std::size_t size() const;
     void readNextRow(std::istream&);
 };

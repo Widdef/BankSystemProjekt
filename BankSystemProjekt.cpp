@@ -11,18 +11,14 @@
 int main()
 {
     std::srand(std::time(nullptr));
-
+    std::map<std::string, Client*> clientsMap;
     std::ifstream file("ClientsList.csv");
     for (auto& row : CSVRange(file))
     {
-        std::cout << "4th Element(" << row[0] << ")\n";
+        Client client(row[0], row[1], row[2], res::eNationality(std::stoi(row[3])), row[4], res::eGender(std::stoi(row[5])), Date(std::stoi(row[6]), std::stoi(row[7]), std::stoi(row[8])));
+        clientsMap.insert({ client.getClientNumber(), &client });
+        client.showData();
     }
-    Client cli1("Mark", "", "Kowalski", res::German, "ABC123", res::male, Date(13, 4, 1993));
-    cli1.showData();
-    Client cli2("Damian", "", "Kowalski", res::Polish, "ADC1337", res::male, Date(12, 3, 1999));
-    cli2.showData();
-
-    std::map<std::string, Client*> clientsMap{ {cli1.getClientNumber(), &cli1}, {cli2.getClientNumber(), &cli2} };
 
     UI* menu = new UI();
     
